@@ -4,8 +4,8 @@ Elves now need to recover. On each line, the calibration value can be
 found by combining the first digit and the last digit (in that order) 
 to form a single two-digit number.'''
 
-#file = input("¿Qué archivo deseas abrir? ")
-file = "input.txt"
+file = input("¿Qué archivo deseas abrir? ")
+
 try:
     open_file = open(file)
 except:
@@ -34,16 +34,12 @@ for linea in open_file:
     digitos = int(digitos)
     lista_final.append(digitos)
     lista_linea = []
-
+    resultado = sum(lista_final)
 
 
     
-print(f"El documento tiene", contador, "lineas")
-print(len(lista_final))
-
-print(lista_final)
-
-resultado = sum(lista_final)
-print(resultado)
+print(f"El documento contiene", contador, "lineas")
+print(f"La cantidad de valores recopilados es de",len(lista_final))
+print(f"La suma de todos los valores recopilados es",resultado)
 
 
