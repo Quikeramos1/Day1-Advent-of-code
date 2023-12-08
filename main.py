@@ -18,6 +18,8 @@ for linea in open_file:
     linea = linea.rstrip()
     lista_linea = []
     lista_text = []
+   
+
 
     for i in linea:
         lista_text.append(i)
@@ -32,7 +34,9 @@ for linea in open_file:
                 if num in text_final:
                     num = dnums[num]
                     lista_linea.append(num)
-                    lista_text = []
+                    lista_prov = lista_text[-2],lista_text[-1]
+                    lista_text = list(lista_prov)
+                    
                     break
 
     digitos = str(lista_linea[0]) + str(lista_linea[-1])
